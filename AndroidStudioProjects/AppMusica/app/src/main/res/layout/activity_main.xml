@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgfondo"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tituloCancion"
+        android:layout_width="103dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="40dp"
+        android:paddingTop="20sp"
+        android:text="Wake up"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/grupoMusical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageView" />
+
+    <TextView
+        android:id="@+id/grupoMusical"
+        android:layout_width="233dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:text="Imagine Dragons"
+        android:textColor="@color/white"
+
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloCancion" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonPlay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiempoActual"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/imageCompartir"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_error"
+        app:layout_constraintBottom_toTopOf="@+id/tiempoActual"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupoMusical"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
+    <TextView
+        android:id="@+id/tiemporestante"
+        android:layout_width="39dp"
+        android:layout_height="28dp"
+        android:text="3:02"
+
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageAnterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+
+        android:layout_width="276dp"
+        android:layout_height="24dp"
+        android:background="@color/design_default_color_error"
+        android:progress="25"
+        app:layout_constraintBottom_toTopOf="@+id/botonPlay"
+        app:layout_constraintEnd_toStartOf="@+id/tiemporestante"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tiempoActual"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton12" />
+
+    <TextView
+        android:id="@+id/tiempoActual"
+        android:layout_width="39dp"
+        android:layout_height="28dp"
+        android:text="0:51"
+
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCompartir" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_error"
+        app:layout_constraintBottom_toTopOf="@+id/tiemporestante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton12"
+        app:layout_constraintTop_toBottomOf="@+id/grupoMusical"
+        app:srcCompat="@drawable/baseline_list_24" />
+
+    <ImageButton
+        android:id="@+id/botonPlay"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageAnterior"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/imageAnterior"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonPlay"
+        app:layout_constraintTop_toBottomOf="@+id/tiemporestante"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <SeekBar
+        android:id="@+id/barravolumen"
+        android:layout_width="120dp"
+        android:layout_height="10dp"
+        android:background="@color/design_default_color_error"
+
+        android:paddingStart="20dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/tiemporestante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ImageView"
+        android:layout_width="319dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagendisco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_error"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageCompartir"
+        app:layout_constraintTop_toBottomOf="@+id/grupoMusical"
+        app:srcCompat="@drawable/baseline_queue_music_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

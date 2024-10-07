@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgfondo"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tituloCancion"
+        android:layout_width="116dp"
+        android:layout_height="52dp"
+
+        android:text="Wake up"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/barravolumen"
+        app:layout_constraintEnd_toStartOf="@+id/imagenDisco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/grupoMusical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/grupoMusical"
+        android:layout_width="205dp"
+        android:layout_height="38dp"
+        android:text="Imagine Dragons"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageCompartir"
+        app:layout_constraintEnd_toStartOf="@+id/tituloCancion"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageCompartir"
+        android:layout_width="59dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="4dp"
+
+        android:backgroundTint="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupoMusical"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
+    <ImageButton
+        android:id="@+id/imageAnterior"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/barravolumen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonPlay"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton8"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="9dp"
+
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/botonPlay"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageCompartir"
+        app:layout_constraintTop_toBottomOf="@+id/grupoMusical"
+        app:srcCompat="@drawable/baseline_queue_music_24" />
+
+    <ImageButton
+        android:id="@+id/botonPlay"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/imageAnterior"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton12"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/botonPlay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCompartir"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="9dp"
+
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/imageAnterior"
+        app:layout_constraintEnd_toStartOf="@+id/barravolumen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton12"
+        app:layout_constraintTop_toBottomOf="@+id/grupoMusical"
+        app:srcCompat="@drawable/baseline_list_24" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="201dp"
+        android:layout_height="17dp"
+        android:progress="25"
+        android:progressDrawable="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/barravolumen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonPlay" />
+
+    <SeekBar
+        android:id="@+id/barravolumen"
+        android:layout_width="125dp"
+        android:layout_height="130dp"
+        android:progress="70"
+        android:progressDrawable="@color/design_default_color_error"
+        android:rotation="270"
+        app:layout_constraintBottom_toTopOf="@+id/botonVolume"
+        app:layout_constraintEnd_toStartOf="@+id/imagenDisco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton8"
+        app:layout_constraintTop_toBottomOf="@+id/tituloCancion" />
+
+    <TextView
+        android:id="@+id/tiempoActual"
+        android:layout_width="30dp"
+        android:layout_height="23dp"
+        android:text="0:45"
+
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/tiemporestante"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <ImageButton
+        android:id="@+id/botonVolume"
+        android:layout_width="28dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="45dp"
+        android:background="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imagenDisco"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/barravolumen"
+        app:layout_constraintVertical_bias="0.185"
+        app:srcCompat="@drawable/baseline_volume_up_24" />
+
+    <TextView
+        android:id="@+id/tiemporestante"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
+        android:background="@drawable/imgfondo"
+        android:text="3:02"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/barravolumen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tiempoActual"
+        app:layout_constraintTop_toBottomOf="@+id/imageAnterior" />
+
+    <ImageView
+        android:id="@+id/imagenDisco"
+        android:layout_width="301dp"
+        android:layout_height="328dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/barravolumen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagendisco" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
